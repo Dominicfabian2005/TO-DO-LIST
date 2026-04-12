@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background-color:#8271C0;
+    font-family: 'Raleway', sans-serif !important;
+}
+
+h1{
+    color:#61519b;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+#principal-container{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    height:100%;
+   
+}
+
+#tareas-contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 665px;
+    background-color: #ffffff;
+    
+
+}
+#tareas{
+    width: 800px;
+    height: 500px;
+    overflow-y: auto;
+    margin-top: 50px;
+      display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   align-items: center;
+
+}
+
+#tareas::-webkit-scrollbar {
+    display: none; 
+}
+
+#btn-agregar {
+  background: linear-gradient(
+    135deg,
+    #5f72ff,
+    #4C5FD5,
+    #3a4ecc
+  );
+
+  color: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Hover: se levanta y se ilumina */
+#btn-agregar:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 18px rgba(76, 95, 213, 0.8);
+}
+
+/* Active: se presiona */
+#btn-agregar:active {
+  transform: translateY(0) scale(0.95);
+  box-shadow: 0 0 8px rgba(34, 50, 156, 0.9);
+}
+#agregar{
+    margin-top: 20px;
+}
+
+.sidebar-objetos{
+    width: 100%;
+    height: 4rem;
+   background-color:#8271C0;
+   color: white;
+   font-weight: bold;
+   font-size: 14px;
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  
+
+}
+
+.sidebar-objetos .texto{
+margin-left: 40px;  
+
+}
+
+.sidebar-objetos:hover{
+
+     background-color:#a28fe6;
+    color: #452b4d;
+}
+
+.sidebar-objetos:active{
+
+     background-color:#4f4572;
+     color: white;
+    
+}
+
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    
+   
+    align-items: center;
+}
+.li-n span::before {
+    content: "• ";
+    color: #61519b;
+    font-size: 25px;
+}
+
+.li-n{
+      width: 35rem;
+    min-height: 4rem;  
+    height: auto;       
+    word-break: break-word; 
+    white-space: normal;  
+    height: 4rem;
+background: #fff6a3;
+border-radius: 10px;
+list-style-type: circle;
+font-size: 20px;
+text-align: center;
+color: rgb(0, 0, 0);
+font-weight: bold;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+padding-left: 20px;
+justify-content: space-between;
+
+}
+
+.li-completada .li-n {
+  background: linear-gradient(to right, #a8e6a3, #6dbf67); 
+}
+
+.check-externo {
+    transform: scale(4.8);
+    cursor: pointer;
+    margin-right: 15px; 
+}
+
+#lista-tareas {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+      padding-left: 20px;
+   
+    
+}
+
+.class-contenedor-Tareas{
+   display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 5px;
+    margin-bottom: 20px;
+    height: auto; 
+}
+
+button{
+    width: 6rem;
+    height: 2.3rem;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #3a4ecc;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#total-titulo{
+    margin-left: 30px;  
+}
+
+.btn-borrar {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: gray;
+  width: 4.1rem;
+  height: 4.1rem;
+}
+
+#input-tarea{
+    width: 27rem;
+    height: 2rem;
+    border-radius: 7px;
+    border: style 1px;;
+}
+
+#agregar-modal{
+    background-color: #6e58ba;
+}
+
+.editar-tarea {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    outline: 2px solid #61519b;
+    border-radius: 5px;
+}
+
+.contenedor-fila {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.etiqueta-estado {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.etiqueta-pendiente {
+  color: #7e796f;
+}
+
+.etiqueta-completada {
+  color: #7e796f;
+
+}
